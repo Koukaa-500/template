@@ -45,119 +45,124 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
-                <h1 class="m-0 text-primary">JobEntry</h1>
+                <h1 class="m-0 text-primary">Navette</h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link">Accueil</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="job-list.html" class="dropdown-item">Job List</a>
-                            <a href="job-detail.html" class="dropdown-item">Job Detail</a>
-                        </div>
+                        <a href="job-list.html" class="nav-item nav-link">Réservation</a>
+                        
+                            
+                           
+                        
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="category.html" class="dropdown-item active">Job Category</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="category.html" class="dropdown-item">Crér navette</a>
+                            <a href="testimonial.html" class="dropdown-item">Gérer navette</a>
                             <a href="404.html" class="dropdown-item">404</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="auth/auth.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Log Out<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
 
 
         <!-- Header End -->
-        <div class="container-xxl py-5 bg-dark page-header mb-5">
-            <div class="container my-5 pt-5 pb-4">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Category</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb text-uppercase">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Category</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+  
         <!-- Header End -->
 
 
-        <!-- Category Start -->
-        <div class="container-xxl py-5">
+        <!-- Job Detail Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
-                <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Explore By Category</h1>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                            <h6 class="mb-3">Marketing</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-8">
+                        
+
+                        
+        
+                        <div class="">
+                            <h4 class="mb-4">Crér nouvelle navette..</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Déstination">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" class="form-control" placeholder="Lieu de départ">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Lieu de d'arrivé">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Type de véhicule">
+                                    </div>
+                                    <!-- <div class="col-12 col-sm-6">
+                                        <input type="file" class="form-control bg-white">
+                                    </div> -->
+                                    <div class="col-12 col-sm-6">
+                                        <!-- Input field -->
+                                        <!-- Dropdown for select options -->
+                                        <div class="nav-item dropdown">
+                                            <select class="form-control">
+                                                <option value="">Marque</option>
+                                                <option value="marque1">Marque 1</option>
+                                                <option value="marque2">Marque 2</option>
+                                                <option value="marque3">Marque 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Prix par personne">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Prix de type de véhicule">
+                                        
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Prix de la marque">
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-danger w-100" type="submit">Calculer tarif</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Payer</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-headset text-primary mb-4"></i>
-                            <h6 class="mb-3">Customer Service</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
-                            <h6 class="mb-3">Human Resource</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-tasks text-primary mb-4"></i>
-                            <h6 class="mb-3">Project Management</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
-                            <h6 class="mb-3">Business Development</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
-                            <h6 class="mb-3">Sales & Communication</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
-                            <h6 class="mb-3">Teaching & Education</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <a class="cat-item rounded p-4" href="">
-                            <i class="fa fa-3x fa-drafting-compass text-primary mb-4"></i>
-                            <h6 class="mb-3">Design & Creative</h6>
-                            <p class="mb-0">123 Vacancy</p>
-                        </a>
+        
+                    <div class="col-lg-4">
+                        <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                            <h4 class="mb-4">Navette Détails</h4>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Published On: 01 Jan, 2045</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Vacancy: 123 Position</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Job Nature: Full Time</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Salary: $123 - $456</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Location: New York, USA</p>
+                            <p class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
+                        </div>
+                        <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                            <h4 class="mb-4">Detail Agence</h4>
+                            <p class="m-0">Ipsum dolor ipsum accusam stet et et diam dolores, sed rebum sadipscing elitr vero dolores. Lorem dolore elitr justo et no gubergren sadipscing, ipsum et takimata aliquyam et rebum est ipsum lorem diam. Et lorem magna eirmod est et et sanctus et, kasd clita labore.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Category End -->
+        <!-- Job Detail End -->
 
 
         <!-- Footer Start -->
