@@ -110,39 +110,67 @@
                         
         
                         <div class="">
-                            <h4 class="mb-4">Apply For The Job</h4>
-                            <form>
+                            <h4 class="mb-4">Réserver votre navette vers </h4>
+                            <form id="reservation-form">
                                 <div class="row g-3">
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Nom">
+                                        <input type="text" id="name" class="form-control" placeholder="Nom">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="email" class="form-control" placeholder="Prénom">
+                                        <input type="text" id="prenom" class="form-control" placeholder="Prénom">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Nombre de passagers">
+                                        <input type="number" id="num-passengers" class="form-control" placeholder="Nombre de passagers">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Contact">
-                                    </div>
-                                    <!-- <div class="col-12 col-sm-6">
-                                        <input type="file" class="form-control bg-white">
-                                    </div> -->
-                                    <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Type véhicule">
+                                        <input type="text" id="contact" class="form-control" placeholder="Contact">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Marque">
+                                        <select id="vehicle-type" class="form-control">
+                                            <option value="standard">Standard</option>
+                                            <option value="luxury">Luxury</option>
+                                            <option value="minivan">Minivan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" id="brand" class="form-control" placeholder="Marque">
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-danger w-100" type="submit">Calculer tarif</button>
+                                        <button type="button" class="btn btn-danger w-100" onclick="calculatePrice()">Calculer tarif</button>
                                     </div>
                                     <div class="col-12">
-                                       <a href="reservationUtilisateur.html" role="button" class="btn btn-primary w-100" type="submit">Payer</a>
+                                        <a href="reservationUtilisateur.html" role="button" class="btn btn-primary w-100">Payer</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <p id="price" class="text-center mt-4"></p>
                                     </div>
                                 </div>
                             </form>
                         </div>
+                        
+                        <script>
+                        function calculatePrice() {
+                            const numPassengers = document.getElementById("num-passengers").value;
+                            const vehicleType = document.getElementById("vehicle-type").value;
+                        
+                            let basePricePerPerson = 10;  // Base price per passenger
+                            let vehicleMultiplier = 1;    // Multiplier based on vehicle type
+                        
+                            // Adjust price based on vehicle type
+                            if (vehicleType === "luxury") {
+                                vehicleMultiplier = 2;  // Luxury vehicles are 2x the base price
+                            } else if (vehicleType === "minivan") {
+                                vehicleMultiplier = 1.5;  // Minivans are 1.5x the base price
+                            }
+                        
+                            // Calculate total price
+                            const totalPrice = numPassengers * basePricePerPerson * vehicleMultiplier;
+                        
+                            // Display the price
+                            document.getElementById("price").textContent = `Tarif total: ${totalPrice.toFixed(2)} €`;
+                        }
+                        </script>
+                        
                     </div>
         
                     <div class="col-lg-4">
